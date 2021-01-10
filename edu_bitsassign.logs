@@ -1,0 +1,373 @@
+Statring the Application 
+Starting Streaming process
+Starting Consumer process 
+Starting 1stProducer after 15 sec of applicaion start Productioning 
+Starting 2stProducer after 40 sec of applicaion start  Productioning 
+log4j:WARN No appenders could be found for logger (org.apache.kafka.clients.consumer.ConsumerConfig).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/01/10 14:27:34 INFO AppInfoParser: Kafka version : 2.0.0
+21/01/10 14:27:34 INFO AppInfoParser: Kafka commitId : 3402a8361b734732
+21/01/10 14:27:34 INFO AppInfoParser: Kafka version : 2.0.0
+21/01/10 14:27:34 INFO AppInfoParser: Kafka commitId : 3402a8361b734732
+consumeRecords  
+21/01/10 14:27:34 INFO SparkContext: Running Spark version 2.4.2
+21/01/10 14:27:34 INFO AppInfoParser: Kafka version : 2.0.0
+21/01/10 14:27:34 INFO AppInfoParser: Kafka commitId : 3402a8361b734732
+21/01/10 14:27:34 WARN AppInfoParser: Error registering AppInfo mbean
+javax.management.InstanceAlreadyExistsException: kafka.producer:type=app-info,id=client1
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(Unknown Source)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(Unknown Source)
+	at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:62)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:451)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:304)
+	at edu.bitsassgn2.CustomerDataProducer.createProducer(CustomerDataProducer.java:28)
+	at edu.bitsassgn2.CustomerDataProducer.postDistanceMessageToTopic(CustomerDataProducer.java:65)
+	at edu.bitsassgn2.App.run(App.java:52)
+21/01/10 14:27:35 INFO Metadata: Cluster ID: avDpqb7fQzO1FMVSEviHIQ
+21/01/10 14:27:35 INFO AbstractCoordinator: [Consumer clientId=consumer-1, groupId=KafkaExampleConsumer] Discovered group coordinator DESKTOP-K0TSO9A:9092 (id: 2147483647 rack: null)
+21/01/10 14:27:35 INFO ConsumerCoordinator: [Consumer clientId=consumer-1, groupId=KafkaExampleConsumer] Revoking previously assigned partitions []
+21/01/10 14:27:35 INFO AbstractCoordinator: [Consumer clientId=consumer-1, groupId=KafkaExampleConsumer] (Re-)joining group
+21/01/10 14:27:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+21/01/10 14:27:35 INFO AbstractCoordinator: [Consumer clientId=consumer-1, groupId=KafkaExampleConsumer] Successfully joined group with generation 18
+21/01/10 14:27:35 INFO ConsumerCoordinator: [Consumer clientId=consumer-1, groupId=KafkaExampleConsumer] Setting newly assigned partitions [CUSTOMER_DATA1-0]
+21/01/10 14:27:35 INFO SparkContext: Submitted application: 9b48a4f9-39ee-4574-af82-6a571e261d48
+21/01/10 14:27:35 INFO SecurityManager: Changing view acls to: Chandu
+21/01/10 14:27:35 INFO SecurityManager: Changing modify acls to: Chandu
+21/01/10 14:27:35 INFO SecurityManager: Changing view acls groups to: 
+21/01/10 14:27:35 INFO SecurityManager: Changing modify acls groups to: 
+21/01/10 14:27:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Chandu); groups with view permissions: Set(); users  with modify permissions: Set(Chandu); groups with modify permissions: Set()
+21/01/10 14:27:37 INFO Utils: Successfully started service 'sparkDriver' on port 54262.
+21/01/10 14:27:37 INFO SparkEnv: Registering MapOutputTracker
+21/01/10 14:27:37 INFO SparkEnv: Registering BlockManagerMaster
+21/01/10 14:27:37 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/01/10 14:27:37 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/01/10 14:27:37 INFO DiskBlockManager: Created local directory at C:\Users\Chandu\AppData\Local\Temp\blockmgr-7f76f33b-e50a-4e36-ba19-62069258a7f2
+21/01/10 14:27:37 INFO MemoryStore: MemoryStore started with capacity 356.7 MB
+21/01/10 14:27:37 INFO SparkEnv: Registering OutputCommitCoordinator
+Post Message to KafkaTopic   :- custId :1  distance :1000
+21/01/10 14:27:37 INFO Metadata: Cluster ID: avDpqb7fQzO1FMVSEviHIQ
+21/01/10 14:27:37 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/01/10 14:27:38 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://DESKTOP-K0TSO9A:4040
+21/01/10 14:27:38 INFO Executor: Starting executor ID driver on host localhost
+21/01/10 14:27:38 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 54274.
+21/01/10 14:27:38 INFO NettyBlockTransferService: Server created on DESKTOP-K0TSO9A:54274
+21/01/10 14:27:38 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/01/10 14:27:38 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, DESKTOP-K0TSO9A, 54274, None)
+21/01/10 14:27:38 INFO BlockManagerMasterEndpoint: Registering block manager DESKTOP-K0TSO9A:54274 with 356.7 MB RAM, BlockManagerId(driver, DESKTOP-K0TSO9A, 54274, None)
+21/01/10 14:27:38 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, DESKTOP-K0TSO9A, 54274, None)
+21/01/10 14:27:38 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, DESKTOP-K0TSO9A, 54274, None)
+Post Message to KafkaTopic   :- custId :2  distance :500
+Post Message to KafkaTopic   :- custId :3  distance :100
+Post Message to KafkaTopic   :- custId :4  distance :0
+Post Message to KafkaTopic   :- custId :5  distance :700
+Post Message to KafkaTopic   :- custId :6  distance :200
+Post Message to KafkaTopic   :- custId :7  distance :50
+Post Message to KafkaTopic   :- custId :8  distance :100
++----------+------+---+------+----------+
+|customerId|gender|age|income|spendscore|
++----------+------+---+------+----------+
+|         1|     M| 30| 14000|        70|
+|         2|     F| 60|  7000|        40|
+|         3|     M| 60|  5000|        30|
+|         4|     F| 30| 20000|        80|
+|         5|     M| 15|  1000|        95|
+|         6|     F| 15|  2000|        98|
+|         7|     M| 40| 14000|        50|
+|         8|     F| 40| 10000|        50|
+|         9|     M| 70|  5000|        10|
++----------+------+---+------+----------+
+
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
++----------+--------+------+-------------+
+
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++---+-----+
+|key|value|
++---+-----+
++---+-----+
+
+Gender :M
+age :30
+outputString :{"customerId":"1","gender":"M","age":30,"income":14000,"spendScore":70,"inMall":"N","isArroundMall":"N","discount":null}
+Gender :F
+age :60
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 72, key = 1, value = {"customerId":"1","gender":"M","age":30,"income":14000,"spendScore":70,"inMall":"N","isArroundMall":"N","discount":null}
+outputString :{"customerId":"2","gender":"F","age":60,"income":7000,"spendScore":40,"inMall":"N","isArroundMall":"Y","discount":null}
+Gender :M
+age :60
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 73, key = 2, value = {"customerId":"2","gender":"F","age":60,"income":7000,"spendScore":40,"inMall":"N","isArroundMall":"Y","discount":null}
+outputString :{"customerId":"3","gender":"M","age":60,"income":5000,"spendScore":30,"inMall":"Y","isArroundMall":"N","discount":"8"}
+Gender :F
+age :30
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 74, key = 3, value = {"customerId":"3","gender":"M","age":60,"income":5000,"spendScore":30,"inMall":"Y","isArroundMall":"N","discount":"8"}
+outputString :{"customerId":"4","gender":"F","age":30,"income":20000,"spendScore":80,"inMall":"Y","isArroundMall":"N","discount":"20"}
+Gender :M
+age :15
+outputString :{"customerId":"5","gender":"M","age":15,"income":1000,"spendScore":95,"inMall":"N","isArroundMall":"N","discount":null}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 75, key = 4, value = {"customerId":"4","gender":"F","age":30,"income":20000,"spendScore":80,"inMall":"Y","isArroundMall":"N","discount":"20"}
+Gender :F
+age :15
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 76, key = 5, value = {"customerId":"5","gender":"M","age":15,"income":1000,"spendScore":95,"inMall":"N","isArroundMall":"N","discount":null}
+outputString :{"customerId":"6","gender":"F","age":15,"income":2000,"spendScore":98,"inMall":"N","isArroundMall":"Y","discount":"10"}
+Gender :M
+age :40
+outputString :{"customerId":"7","gender":"M","age":40,"income":14000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"9"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 77, key = 6, value = {"customerId":"6","gender":"F","age":15,"income":2000,"spendScore":98,"inMall":"N","isArroundMall":"Y","discount":"10"}
+Gender :F
+age :40
+outputString :{"customerId":"8","gender":"F","age":40,"income":10000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"20"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 78, key = 7, value = {"customerId":"7","gender":"M","age":40,"income":14000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"9"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 79, key = 8, value = {"customerId":"8","gender":"F","age":40,"income":10000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"20"}
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
++----------+--------+------+-------------+
+
+Post Message to KafkaTopic   :- custId :1  distance :1000
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         1|    1000|     N|            N|
++----------+--------+------+-------------+
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         1|    1000|     N|            N|
++----------+--------+------+-------------+
+
+Gender :M
+age :30
+outputString :{"customerId":"1","gender":"M","age":30,"income":14000,"spendScore":70,"inMall":"N","isArroundMall":"N","discount":null}
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++---+--------------------+
+|key|               value|
++---+--------------------+
+|  1|{"customerId":"1"...|
++---+--------------------+
+
+Gender :M
+age :30
+outputString :{"customerId":"1","gender":"M","age":30,"income":14000,"spendScore":70,"inMall":"N","isArroundMall":"N","discount":null}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 80, key = 1, value = {"customerId":"1","gender":"M","age":30,"income":14000,"spendScore":70,"inMall":"N","isArroundMall":"N","discount":null}
+Post Message to KafkaTopic   :- custId :2  distance :500
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         2|     500|     N|            Y|
++----------+--------+------+-------------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         2|     500|     N|            Y|
++----------+--------+------+-------------+
+
+Gender :F
+age :60
+outputString :{"customerId":"2","gender":"F","age":60,"income":7000,"spendScore":40,"inMall":"N","isArroundMall":"Y","discount":null}
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++---+--------------------+
+|key|               value|
++---+--------------------+
+|  2|{"customerId":"2"...|
++---+--------------------+
+
+Gender :F
+age :60
+outputString :{"customerId":"2","gender":"F","age":60,"income":7000,"spendScore":40,"inMall":"N","isArroundMall":"Y","discount":null}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 81, key = 2, value = {"customerId":"2","gender":"F","age":60,"income":7000,"spendScore":40,"inMall":"N","isArroundMall":"Y","discount":null}
+Post Message to KafkaTopic   :- custId :3  distance :100
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         3|     100|     Y|            N|
++----------+--------+------+-------------+
+
+Gender :M
+age :60
+outputString :{"customerId":"3","gender":"M","age":60,"income":5000,"spendScore":30,"inMall":"Y","isArroundMall":"N","discount":"8"}
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++---+--------------------+
+|key|               value|
++---+--------------------+
+|  3|{"customerId":"3"...|
++---+--------------------+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         3|     100|     Y|            N|
++----------+--------+------+-------------+
+
+Post Message to KafkaTopic   :- custId :4  distance :0
+Gender :M
+age :60
+outputString :{"customerId":"3","gender":"M","age":60,"income":5000,"spendScore":30,"inMall":"Y","isArroundMall":"N","discount":"8"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 82, key = 3, value = {"customerId":"3","gender":"M","age":60,"income":5000,"spendScore":30,"inMall":"Y","isArroundMall":"N","discount":"8"}
+Post Message to KafkaTopic   :- custId :5  distance :700
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         4|       0|     Y|            N|
++----------+--------+------+-------------+
+
+Post Message to KafkaTopic   :- custId :6  distance :200
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         4|       0|     Y|            N|
+|         5|     700|     N|            N|
++----------+--------+------+-------------+
+
+Gender :F
+age :30
+outputString :{"customerId":"4","gender":"F","age":30,"income":20000,"spendScore":80,"inMall":"Y","isArroundMall":"N","discount":"20"}
+Gender :M
+age :15
+outputString :{"customerId":"5","gender":"M","age":15,"income":1000,"spendScore":95,"inMall":"N","isArroundMall":"N","discount":null}
+-------------------------------------------
+Batch: 4
+-------------------------------------------
+Gender :F
+age :30
+outputString :{"customerId":"4","gender":"F","age":30,"income":20000,"spendScore":80,"inMall":"Y","isArroundMall":"N","discount":"20"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 83, key = 4, value = {"customerId":"4","gender":"F","age":30,"income":20000,"spendScore":80,"inMall":"Y","isArroundMall":"N","discount":"20"}
+Gender :M
+age :15
+outputString :{"customerId":"5","gender":"M","age":15,"income":1000,"spendScore":95,"inMall":"N","isArroundMall":"N","discount":null}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 84, key = 5, value = {"customerId":"5","gender":"M","age":15,"income":1000,"spendScore":95,"inMall":"N","isArroundMall":"N","discount":null}
++---+--------------------+
+|key|               value|
++---+--------------------+
+|  4|{"customerId":"4"...|
+|  5|{"customerId":"5"...|
++---+--------------------+
+
+Post Message to KafkaTopic   :- custId :7  distance :50
+Post Message to KafkaTopic   :- custId :8  distance :100
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         5|     700|     N|            N|
+|         6|     200|     N|            Y|
++----------+--------+------+-------------+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         6|     200|     N|            Y|
+|         7|      50|     Y|            N|
++----------+--------+------+-------------+
+
+Gender :F
+age :15
+outputString :{"customerId":"6","gender":"F","age":15,"income":2000,"spendScore":98,"inMall":"N","isArroundMall":"Y","discount":"10"}
+Gender :M
+age :40
+outputString :{"customerId":"7","gender":"M","age":40,"income":14000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"9"}
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++---+--------------------+
+|key|               value|
++---+--------------------+
+|  6|{"customerId":"6"...|
+|  7|{"customerId":"7"...|
++---+--------------------+
+
+Gender :F
+age :15
+outputString :{"customerId":"6","gender":"F","age":15,"income":2000,"spendScore":98,"inMall":"N","isArroundMall":"Y","discount":"10"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 85, key = 6, value = {"customerId":"6","gender":"F","age":15,"income":2000,"spendScore":98,"inMall":"N","isArroundMall":"Y","discount":"10"}
+Gender :M
+age :40
+outputString :{"customerId":"7","gender":"M","age":40,"income":14000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"9"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 86, key = 7, value = {"customerId":"7","gender":"M","age":40,"income":14000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"9"}
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         7|      50|     Y|            N|
+|         8|     100|     Y|            N|
++----------+--------+------+-------------+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++----------+--------+------+-------------+
+|customerId|distance|inMall|isArroundMall|
++----------+--------+------+-------------+
+|         8|     100|     Y|            N|
++----------+--------+------+-------------+
+
+Gender :F
+age :40
+outputString :{"customerId":"8","gender":"F","age":40,"income":10000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"20"}
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++---+--------------------+
+|key|               value|
++---+--------------------+
+|  8|{"customerId":"8"...|
++---+--------------------+
+
+Gender :F
+age :40
+outputString :{"customerId":"8","gender":"F","age":40,"income":10000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"20"}
+Received MSG from :- topicName=CUSTOMER_DATA1, offset = 87, key = 8, value = {"customerId":"8","gender":"F","age":40,"income":10000,"spendScore":50,"inMall":"Y","isArroundMall":"N","discount":"20"}
